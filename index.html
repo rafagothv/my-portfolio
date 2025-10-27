@@ -1,1 +1,152 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Portafolio de programación — muestra de proyectos, habilidades y contacto." />
+		<title>Portafolio — Tu Nombre</title>
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+		<!-- Iconos (Font Awesome CDN) -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container nav-wrap">
+				<a class="logo" href="#">Rafa</a>
+				<nav class="main-nav" id="mainNav">
+					<a href="#sobre">Sobre mí</a>
+					<a href="#proyectos">Proyectos</a>
+					<a href="#habilidades">Habilidades</a>
+					<a href="#contacto">Contacto</a>
+				</nav>
+				<button class="nav-toggle" id="navToggle" aria-label="Abrir navegación">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="container hero-grid">
+					<div class="hero-text">
+						<h1>Hola, soy <span class="accent">Rafa</span></h1>
+						<p class="lead">Desarrollador de software — creo interfaces limpias y soluciones robustas. Me especializo en aplicaciones web modernas, rendimiento y experiencia de usuario.</p>
+						<div class="hero-cta">
+							<a class="btn primary" href="#proyectos">Ver mis proyectos</a>
+							<a class="btn outline" href="#contacto">Contactarme</a>
+						</div>
+						<ul class="socials">
+							<li><a href="#"><i class="fab fa-github"></i></a></li>
+							<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="#"><i class="fas fa-envelope"></i></a></li>
+						</ul>
+					</div>
+					<div class="hero-card">
+						<div class="card-avatar">A</div>
+						<div class="card-info">
+							<h3>Proyectos recientes</h3>
+							<p>Un vistazo rápido a proyectos con React, Node.js y APIs modernas.</p>
+							<a class="link" href="#proyectos">Explorar proyectos →</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="sobre" class="section container">
+				<h2>Sobre mí</h2>
+				<p>Soy desarrollador con interés en crear productos digitales con cuidado por el detalle, rendimiento y experiencia de usuario. Trabajo con tecnologías como JavaScript, TypeScript, React y Node.js. Me gusta aprender nuevas herramientas y colaborar en equipos multidisciplinares.</p>
+			</section>
+
+			<section id="proyectos" class="section container">
+				<h2>Proyectos</h2>
+				<div class="projects-grid">
+					<article class="project-card">
+						<div class="project-thumb">IMG</div>
+						<div class="project-body">
+							<h3>Proyecto A</h3>
+							<p>App web con React y API REST. Funcionalidades: auth, CRUD y despliegue continúo.</p>
+							<div class="project-tags"><span>React</span><span>Node.js</span></div>
+							<a class="btn small" href="#">Ver repo</a>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div class="project-thumb">IMG</div>
+						<div class="project-body">
+							<h3>Proyecto B</h3>
+							<p>Sitio estático optimizado con atención a SEO y performance.</p>
+							<div class="project-tags"><span>HTML</span><span>CSS</span></div>
+							<a class="btn small" href="#">Ver demo</a>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div class="project-thumb">IMG</div>
+						<div class="project-body">
+							<h3>Proyecto C</h3>
+							<p>Servicio backend con Node.js y base de datos, tests y documentación.</p>
+							<div class="project-tags"><span>API</span><span>Testing</span></div>
+							<a class="btn small" href="#">Ver detalles</a>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section id="habilidades" class="section container">
+				<h2>Habilidades</h2>
+				<div class="skills-grid">
+					<div class="skill">
+						<h4>JavaScript</h4>
+						<div class="skill-bar"><div style="width:90%"></div></div>
+					</div>
+					<div class="skill">
+						<h4>React</h4>
+						<div class="skill-bar"><div style="width:85%"></div></div>
+					</div>
+					<div class="skill">
+						<h4>Node.js</h4>
+						<div class="skill-bar"><div style="width:80%"></div></div>
+					</div>
+					<div class="skill">
+						<h4>CSS</h4>
+						<div class="skill-bar"><div style="width:85%"></div></div>
+					</div>
+				</div>
+			</section>
+
+			<section id="contacto" class="section container contact-section">
+				<h2>Contacto</h2>
+				<p>¿Interesado en colaborar? Escríbeme un correo o conéctate en LinkedIn.</p>
+				<a class="btn primary" href="mailto:tu@email.com">Enviar correo</a>
+			</section>
+
+		</main>
+
+		<footer class="site-footer">
+			<div class="container footer-wrap">
+				<p>© <span id="year"></span> Rafa — Hecho con ❤</p>
+				<nav class="footer-nav">
+					<a href="#">Privacidad</a>
+					<a href="#">Licencia</a>
+				</nav>
+			</div>
+		</footer>
+
+		<script>
+			// Rellenar año en el footer
+			document.getElementById('year').textContent = new Date().getFullYear();
+
+			// Toggle nav en móvil
+			const navToggle = document.getElementById('navToggle');
+			const mainNav = document.getElementById('mainNav');
+			navToggle && navToggle.addEventListener('click', () => {
+				mainNav.classList.toggle('open');
+			});
+		</script>
+	</body>
+</html>
 
